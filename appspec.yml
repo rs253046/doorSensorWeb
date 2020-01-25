@@ -23,5 +23,5 @@ hooks:
       runas: iot
   ApplicationStart:
     - location: scripts/ApplicationStart.sh
-      timeout: 500
+      timeout: 30
       runas: iot
