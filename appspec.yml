@@ -2,26 +2,26 @@ version: 0.0
 os: linux
 files:
   - source: /app
-    destination: /var/www/html
+    destination: /home/iot/doorSensor
 permissions:
   - object: /
     pattern: "**"
-    owner: root
-    group: root
+    owner: iot
+    group: iot
 hooks:
   ApplicationStop:
     - location: scripts/ApplicationStop.sh
-      timeout: 30
-      runas: root
+      timeout: 300
+      runas: iot
   BeforeInstall:
     - location: scripts/BeforeInstall.sh
-      timeout: 30
-      runas: root
+      timeout: 300
+      runas: iot
   AfterInstall:
     - location: scripts/AfterInstall.sh
-      timeout: 30
-      runas: root
+      timeout: 300
+      runas: iot
   ApplicationStart:
     - location: scripts/ApplicationStart.sh
-      timeout: 30
-      runas: root
+      timeout: 300
+      runas: iot

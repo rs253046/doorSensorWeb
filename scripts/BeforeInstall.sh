@@ -3,7 +3,8 @@
 
 
 # delete all content of folder html
-rm -rf /var/www/html
+rm -rf /home/iot/doorSensor
 
 #update the system
-sudo yum -y update
+sudo apt-get -y update
+sudo apt-get -y upgrade
